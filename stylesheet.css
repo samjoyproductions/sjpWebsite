@@ -33,6 +33,13 @@ img{
     width: 50%;
     padding: 5px;
   }
+
+  .vertColumn {
+    float: left;
+    width: 25%;
+    padding: 5px;
+    margin-top: -24px;
+  }
   
   .row::after {
     content: "";
@@ -73,4 +80,19 @@ img{
     color: black;
     font-size: 20;
     background-image:url(https://samueljoy.zenfolio.com/img/s/v-10/p3879958818-5.jpg);
+}
+
+.leadingImage{
+    display: block;
+    margin-left:auto;
+    margin-right:auto;
+    width: 80%;
+}
+#textBlockCenter{
+    position: absolute;
+    background-color: #ffffff;
+    width: auto;
+    color: black;
+    left:12%;
+    bottom:20px;
 }
