@@ -12,9 +12,12 @@ html{
 
 body {
     background-color: white;
-    margin: 40px;
 }
 
+img{
+    max-width: 100%;
+    max-height: 100%;
+}
 
 a:link{
     color: black;
@@ -23,76 +26,107 @@ a:visited{
     color: black;
 }
 
-img{
-    max-width: 100%;
-    max-height: 100%;
+/* paragraphs on pages layout */
+.paragraphSetup{
+    display: grid;
+    display: grid;
+    grid-template-columns: 1fr minmax(500px, 4fr) 1fr;
+    padding-bottom: 50px;
+}
+p{
+    grid-column: 2/-2;
 }
 
- .column {
-    float: left;
-    width: 50%;
-    padding: 5px;
-  }
-
-  .vertColumn {
-    float: left;
-    width: 25%;
-    padding: 5px;
-    margin-top: -24px;
-  }
-  
-  .row::after {
-    content: "";
-    clear: both;
-    display: table;
-  }
-
-  .textBlock{
-    position: absolute;
-    background-color: #ffffff;
-    width: auto;
-    color: black;
-    left:20px;
-    bottom:20px;
+/* header layout */
+.pageHeader{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    padding: 30px;
+    text-align: center;
+}
+.headerLogo{
+   font-size: 40px; 
+   font-weight: bold;
+}
+.headerNav{
+    grid-row: span 2;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    justify-items: center;
+    align-items: center;
 }
 
+/* index page article items */
+
+.articleGallery{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    padding: 0px 20px 20px 20px;
+}
+
+/* text with image layout */
 .textWithImage{
-    position:relative;
+    display: grid;
 }
 
-.headerName{
-    padding-left: 10%;
-    text-align: center;
+.imageUnderText{
+    justify-self: center;
+    position: relative;
+    max-width: 100%;
 }
 
-.navBar{
-    word-spacing: 100px;
-    text-align: center;
-    margin-top: 45px;
-}
-
-#aboutSelfPortrait{
-    width: 1100px;
-    height: 733px;
-    margin: 50px;
-    text-indent: 40%;
-    background: #ffffff;
-    color: black;
-    font-size: 20;
-    background-image:url(https://samueljoy.zenfolio.com/img/s/v-10/p3879958818-5.jpg);
-}
-
-.leadingImage{
-    display: block;
-    margin-left:auto;
-    margin-right:auto;
-    width: 80%;
-}
-#textBlockCenter{
+.imageTextBlock{
     position: absolute;
     background-color: #ffffff;
     width: auto;
     color: black;
-    left:12%;
-    bottom:20px;
+    left:6%;
+    bottom:6%;
+}
+
+/* gallery layout */
+.singlePageGallery{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: 500px;
+    grid-auto-flow: dense;
+    padding: 30px;
+}
+
+.galleryItem{
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+.galleryHeaderPic{
+    grid-column: 1/-1;
+    grid-row: span 2;
+}
+
+.galleryVertPic{
+    grid-row: span 2;
+}
+
+/* contact layout */
+
+.contactGallery{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 250px);
+    grid-gap: 20px;
+    padding: 0px 20px 20px 20px;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+}
+
+/* footer */
+footer{
+    text-align: center;
+    padding: 0px 10px 10px 10px;
 }
