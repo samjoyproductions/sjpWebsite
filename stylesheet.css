@@ -92,9 +92,9 @@ p{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 10px;
-    grid-auto-rows: 500px;
+    grid-auto-rows: 400px;
     grid-auto-flow: dense;
-    padding: 30px;
+    padding: 0px 10px 0px 10px;
 }
 
 .galleryItem{
